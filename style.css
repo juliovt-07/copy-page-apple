@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'SF Pro Text';
+    src: url(assets/SFProText-Regular.ttf)
+}
+
+/* basic styles */
+
+.flex {
+    display: flex;
+}
+
+.gap-default {
+    gap: 10px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.between {
+    justify-content: space-between;
+}
+
+::-webkit-scrollbar-track {
+    position: absolute;
+    background-color: rgba(31, 31, 31, .3);
+}
+
+::-webkit-scrollbar {
+    width: 0.25rem;
+    border-radius: 0.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0.125rem;
+    background-color: rgba(71, 71, 71, .7);
+}
+
+
+body {
+    font-family: 'SF Pro Text';
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+h2 {
+    font-size: 56px;
+    line-height: 1.07143;
+    font-weight: 600;
+    letter-spacing: -.005em;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.10722;
+    font-weight: 400;
+    letter-spacing: .004em;
+}
+
+.small-section h2 {
+    font-size: 38px;
+}
+
+.small-section h3 {
+    font-size: 20px;
+}
+
+/* header */
+
+header ul,
+main section,
+footer {
+    width: 100%;
+    max-width: 988px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.small-section section {
+    min-width: 350px;
+    width: 49%;
+    max-width: 679px;
+}
+
+.small-section {
+    margin-top: 15px;
+    padding: 0 12px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+#small-nav {
+    display: none;
+}
+
+header {
+    color: #fff;
+    font-weight: 100;
+    font-size: 11px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .7);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+header ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+header ul li {
+    opacity: .8;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+header ul li:hover {
+    opacity: 1;
+}
+
+/* main */
+
+.bg-banner {
+    width: 100vw;
+    background-color: #000;
+}
+
+.bg-section {
+    background-color: #fbfbfd;
+}
+
+main .banner {
+    position: relative;
+    overflow: hidden;
+    height: 630px;
+}
+
+main .banner.black {
+    color: #fff;
+    background-color: #000;
+}
+
+main .banner.gray {
+    background-color: #fbfbfd;
+}
+
+main .banner.gray-secondary {
+    background-color: #f5f5f7;
+}
+
+
+main section .cta {
+    z-index: 1;
+    gap: 18px;
+}
+
+main section .cta .cta-links {
+    gap: 30px;
+}
+
+main section .cta-links a {
+    color: #2997ff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+main section .cta-links a:hover {
+    text-decoration: underline;
+}
+
+main section p {
+    font-size: 20px;
+    color: #777;
+}
+
+main .banner-img {
+    position: absolute;
+    bottom: 0;
+}
+
+main .banner-img img {
+    height: 706px;
+    z-index: 0;
+}
+
+main .black .banner-img img {
+    height: 806px;
+    z-index: 0;
+}
+
+#banner-small {
+    display: none;
+}
+
+section {
+    padding-top: 100px;
+    text-align: center;
+}
+
+.small-section section {
+    max-height: 500px;
+}
+
+.small-section img {
+    max-height: 520px;
+    margin-bottom: -7px;
+}
+
+#logo-watch-8 {
+    height: 60px;
+}
+
+#logo-watch-se {
+    height: 60px;
+}
+
+#logo-fitness-plus {
+    height: 40px;
+}
+
+@media screen and (max-width: 1070px) {
+    #full-nav {
+        display: none;
+    }
+    #small-nav {
+        display: flex;
+        max-width: 90vw;
+    }
+}
+
+@media screen and (max-width: 735px) {
+    #banner-large {
+        display: none;
+    }
+
+    #banner-small {
+        display: block;
+    }
+
+    main .black .banner-img img {
+        height: 706px;
+        z-index: 0;
+    }
+
+    .small-section section {
+        width: 100%;
+    }
+
+    #hero_apple_watch_ultra {
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    #hero_apple_watch_ultra img {
+        margin-top: -60px;
+        height: 460px;
+        position: absolute;
+    }
+}
